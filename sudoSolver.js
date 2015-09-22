@@ -46,6 +46,7 @@ function bruteForce(){
 
 var heuristicFind = 0;
 function heuristic(){
+	Q('#info').innerHTML = "";
 	init();
 	heuristicFind = 0;
 	humanwayMain();

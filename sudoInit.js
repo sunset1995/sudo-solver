@@ -7,7 +7,7 @@ nowFocus = {r:1 , c:1};
 Qall('#sudo td input' , function(now){
 	now.addEventListener('blur' , function(){
 		if( this.value==='' )
-			this.className = this.className.replace('bSetted','');
+			this.className = this.className.replace(/bSetted/g,'');
 		else
 			this.className += ' bSetted';
 	})
