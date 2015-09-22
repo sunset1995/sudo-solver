@@ -31,6 +31,7 @@ function init(){
 stCnt = 0;
 rStack = [{re:false}];
 stopSignal = false;
+recurCnt = 0;
 
 function bruteForce(){
 	stCnt = 0;
