@@ -36,7 +36,7 @@ position.prototype.setVal = function(v , next){
 		this.dom.children[0].value = v;
 		this.val = v;
 	}
-	if( recurCnt > 10 ){
+	if( recurCnt > 100 ){
 		setTimeout( function(){
 			next();
 		} , 0);
