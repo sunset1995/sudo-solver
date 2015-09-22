@@ -66,11 +66,11 @@ h1{
 	background-color: #044A42;
 }
 
-#funcBlock{
+.funcBlock{
 	margin-bottom: 1em;
 	text-align: center;
 }
-#funcBlock button{
+.funcBlock button{
 	display: inline-block;
 	padding: .5em 2em;
 	background-color: #044A42;
@@ -82,7 +82,7 @@ h1{
 	opacity: .8;
 	transition: all 800ms cubic-bezier(.16 , .84 , .44 , 1);
 }
-#funcBlock button:hover{
+.funcBlock button:hover{
 	opacity: 1;
 }
 
