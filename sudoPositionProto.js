@@ -56,7 +56,8 @@ position.prototype.onePossibility = function(){
 	return this.theOnlyOne;
 };
 
-position.prototype.delPossibility = function(){
+position.prototype.delPossibility = function(which){
+	if( which<1 || which>9 ) return;
 	if( this.val ) return;
 	if( !this.can[which] ) return;
 	this.can[which] = false;

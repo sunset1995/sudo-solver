@@ -33,6 +33,8 @@ rStack = [{re:false}];
 stopSignal = false;
 showProcessOn = true;
 maxRecurDepth = 1;
+priList = [];
+nowPri = 0;
 
 function ans(){
 	stCnt = 0;
@@ -42,11 +44,36 @@ function ans(){
 	rStack = [{re:false}];
 	init();
 
-	//humanwayMain(); dfsMain();
-	dfsMain();
-	//smartMain();
-}
+	priList = [];
+	for(var i=0 ; i<9 ; ++i)
+		for(var j=0 ; j<9 ; ++j)
+			if( block[i][j].val == 0 )
+				priList.push( block[i][j] );
+	nowPri = 0;
 
+	for(var i=0 ; i<priList.length ; ++i){
+		var sqrG = priList[i].bigBlockID();
+		var rowG = priList[i].row;
+		var colG = priList[i].col;
+		for(var j=0; j<9; ++j ){
+			priList[ i ].delPossibility( 
+				parseInt( sCompare[sqrG][j].val , 10)
+			);
+			priList[ i ].delPossibility( 
+				parseInt( rCompare[rowG][j].val , 10)
+			);
+			priList[ i ].delPossibility( 
+				parseInt( sCompare[sqrG][j].val , 10)
+			);
+		}
+	}
+
+	priList.sort( function(a , b){
+		return a.numCan > b.numCan;
+	} );
+	dfsMain();
+}
+/*
 function dfsMain(r , c) {
 	var i = r || 0;
 	var j = c || 0;
@@ -59,6 +86,18 @@ function dfsMain(r , c) {
 	blinkInfo('Solved. Try '+stCnt+' states');
 	rStack[ rStack.length - 1 ].re = true;
 	stop();
+}*/
+function dfsMain(r , c){
+	if( nowPri == priList.length ){
+		blinkInfo('Solved. Try '+stCnt+' states');
+		rStack[ rStack.length - 1 ].re = true;
+		stop();
+		return;
+	}
+	if( !priList[nowPri].val ){
+		dfs( priList[nowPri] );
+		return;
+	}
 }
 
 function dfs(nowAt) {
@@ -101,16 +140,22 @@ function runRecur(){
 		nowS.ok[i] = false;
 		++stCnt;
 		//Q('#info').innerHTML = 'Try '+stCnt+' states';
+		++nowPri;
 		nowS.nowAt.setVal( i , function(){
 			dfsMain(nowS.row , nowS.col);
 		} );
 		return;
 	}
+	--nowPri;
 	nowS.nowAt.setVal('' , function(){
 		rStack.pop();
 		rStack[ rStack.length - 1 ].re = false;
 		runRecur();
 	});
+}
+
+function heuristicMain(){
+
 }
 
 
