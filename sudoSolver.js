@@ -211,7 +211,7 @@ function stop(){
 	Qall('td input' , function(now){
 		now.style.pointerEvents = 'auto';
 	});
-	Q('#bruteforce').innerHTML = 'Start';
+	Q('#bruteforce').innerHTML = 'Brute Force Compute';
 }
 function clean(){
 	stop();
@@ -221,16 +221,6 @@ function clean(){
 	Qall('#sudo td input' , function(now){
 		now.className = now.className.replace(/bSetted/g,'');
 	});
-}
-function showP(){
-	if( showProcessOn ){
-		showProcessOn = false;
-		this.innerHTML = 'show process : off';
-	}
-	else{
-		showProcessOn = true;
-		this.innerHTML = 'show process : on';
-	}
 }
 
 Q('#bruteforce').addEventListener('click' , start);
