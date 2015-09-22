@@ -107,3 +107,57 @@ footer{
 	animation-duration: 1s;
 	animation-name: blink;
 }
+
+@media screen and (max-width: 850px){
+	#sudo td input{
+		font-size: 1em;
+		display: inline-block;
+		height: 50px;
+		width: 50px;
+	}
+	#sudo td{
+		margin: 2px 1px;
+	}
+	#sudo tr:nth-child(3n+4){
+		margin-top: 10px;
+	}
+	#sudo td:nth-child(3n+4){
+		margin-left: 10px;
+	}
+}
+
+@media screen and (max-width: 850px){
+	#sudo td input{
+		font-size: 1em;
+		display: inline-block;
+		height: 50px;
+		width: 50px;
+	}
+	#sudo td{
+		margin: 2px 1px;
+	}
+	#sudo tr:nth-child(3n+4){
+		margin-top: 10px;
+	}
+	#sudo td:nth-child(3n+4){
+		margin-left: 10px;
+	}
+}
+
+@media screen and (max-width: 600px){
+	#sudo td input{
+		font-size: 1em;
+		display: inline-block;
+		height: 35px;
+		width: 35px;
+	}
+	#sudo td{
+		margin: 2px 1px;
+	}
+	#sudo tr:nth-child(3n+4){
+		margin-top: 5px;
+	}
+	#sudo td:nth-child(3n+4){
+		margin-left: 5px;
+	}
+}
