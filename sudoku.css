@@ -91,7 +91,11 @@ h1{
 }
 
 footer{
-	height: 60px;
+	display: block;
+	line-height: 60px;
+	color: #062925;
+	opacity: .8;
+	text-align: center;
 }
 
 @keyframes blink{
