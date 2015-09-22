@@ -1,0 +1,109 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Microsoft JhengHei','Heiti TC','WenQuanYi Zen Hei','PT Sans Narrow','Source Han Sans TWHK',sans-serif;
+}
+body,html{
+	background-color: #B8E1DD;
+}
+h1{
+	padding-top: .5em;
+	text-align: center;
+	color: #062925;
+}
+
+#info{
+	text-align: center;
+	color: #062925;
+	height: 30px;
+	line-height: 30px;
+}
+
+#container{
+	text-align: center;
+}
+
+#sudo{
+	border: 0;
+	margin: 0 auto;
+	border-collapse: separate;
+	border-spacing: 20px;
+}
+#sudo tr{
+	display: inline-block;
+}
+#sudo tr:nth-child(3n+4){
+	margin-top: 20px;
+}
+#sudo td{
+	display: inline-block;
+	margin: 4px 3px;
+	border: 0px;
+}
+#sudo td:nth-child(3n+4){
+	margin-left: 20px;
+}
+#sudo td input{
+	text-align: center;
+	font-size: 1.2em;
+	display: inline-block;
+	color: #ddd;
+	height: 75px;
+	width: 75px;
+	border: 0px;
+	border-radius: 3px;
+	opacity: .8;
+	transition: all 800ms cubic-bezier(.16 , .84 , .44 , 1);
+}
+#sudo td input:hover{
+	opacity: 1;
+	transform: scale(1.05);
+}
+.bBlank{
+	background-color: #3A9188;
+}
+.bSetted{
+	background-color: #044A42;
+}
+
+#funcBlock{
+	margin-bottom: 1em;
+	text-align: center;
+}
+#funcBlock button{
+	display: inline-block;
+	padding: .5em 2em;
+	background-color: #044A42;
+	color: #aaa;
+	border-radius: 3px;
+	border: 0;
+	color: white;
+	cursor: pointer;
+	opacity: .8;
+	transition: all 800ms cubic-bezier(.16 , .84 , .44 , 1);
+}
+#funcBlock button:hover{
+	opacity: 1;
+}
+
+#checkBlock{
+	text-align: right;
+}
+
+footer{
+	height: 60px;
+}
+
+@keyframes blink{
+	0%		{ opacity: 0; }
+	20%	{ opacity: 1; }
+	40%	{ opacity: 0; }
+	60%	{ opacity: 1; }
+	80%	{ opacity: 0; }
+	100%	{ opacity: 1; }
+}
+
+.blink{
+	animation-duration: 1s;
+	animation-name: blink;
+}
