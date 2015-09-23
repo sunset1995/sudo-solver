@@ -24,15 +24,30 @@
 </head>
 <body>
 	<div id="container">
-		<h1>Sudoku solver</h1>
+		<h1>數獨計算機</h1>
 
 		<div class="funcBlock">
-			<button id="bruteforce">Brute Force Compute</button>
-			<button id="clean">clean</button>
-			<button id="heuristic">Try Smart</button>
+			<button id="bruteforce">爆搜找解</button>
+			<button id="clean">清除</button>
+			<button id="heuristic">簡單刪去法</button>
 		</div>
 
 		<div id="info"></div>
+
+		<div class="funcBlock">
+			<select id="defaultCase">
+				<option value="1">預設題 1</option>
+				<option value="2">預設題 2</option>
+				<option value="3">預設題 3</option>
+				<option value="4">預設題 4</option>
+				<option value="5">預設題 5</option>
+				<option value="6">預設題 6</option>
+				<option value="7">預設題 7</option>
+				<option value="8">預設題 8</option>
+				<option value="9">預設題 9</option>
+			</select>
+			<button id="setDefault">套用</button>
+		</div>
 
 		<table id="sudo">
 			<tr id="c1">
@@ -135,21 +150,6 @@
 				<td id="r9c9" class="block"></td>
 			</tr>
 		</table>
-	</div>
-
-	<div class="funcBlock">
-		<select id="defaultCase">
-			<option value="1">Default Case 1</option>
-			<option value="2">Default Case 2</option>
-			<option value="3">Default Case 3</option>
-			<option value="4">Default Case 4</option>
-			<option value="5">Default Case 5</option>
-			<option value="6">Default Case 6</option>
-			<option value="7">Default Case 7</option>
-			<option value="8">Default Case 8</option>
-			<option value="9">Default Case 9</option>
-		</select>
-		<button id="setDefault">Apply</button>
 	</div>
 
 	<footer>coded by Sunset. source code on <a target="_blank" href="https://github.com/sunset1995/sudoku-solver">github</a></footer>

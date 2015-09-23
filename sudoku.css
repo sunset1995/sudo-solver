@@ -15,8 +15,8 @@ h1{
 #info{
 	text-align: center;
 	color: #062925;
-	height: 30px;
-	line-height: 30px;
+	height: 50px;
+	line-height: 50px;
 }
 
 #container{
@@ -67,7 +67,6 @@ h1{
 }
 
 .funcBlock{
-	margin-bottom: 1em;
 	text-align: center;
 }
 .funcBlock button{

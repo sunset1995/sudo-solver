@@ -50,7 +50,7 @@ function heuristic(){
 	init();
 	heuristicFind = 0;
 	humanwayMain();
-	blinkInfo('Heuristic find '+heuristicFind+' directly');
+	blinkInfo('刪去 '+heuristicFind+' 個確定的');
 }
 
 function dfsMain(r , c) {
@@ -201,7 +201,7 @@ function start(){
 	Qall('td input' , function(now){
 		now.style.pointerEvents = 'none';
 	});
-	Q('#bruteforce').innerHTML = 'Stop';
+	Q('#bruteforce').innerHTML = '停止';
 	bruteForce();
 }
 function stop(){
@@ -211,7 +211,7 @@ function stop(){
 	Qall('td input' , function(now){
 		now.style.pointerEvents = 'auto';
 	});
-	Q('#bruteforce').innerHTML = 'Brute Force Compute';
+	Q('#bruteforce').innerHTML = '爆搜找解';
 }
 function clean(){
 	stop();
